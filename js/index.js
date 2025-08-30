@@ -2,6 +2,27 @@ let hearts=parseInt(document.getElementById("heart-count").innerText);
 let copy=parseInt(document.getElementById("copy-count").innerText);
 let coin= parseInt(document.getElementById("coin-amount").innerText)
 
+const callData= [];
+
+
+function callHistory(callData){
+    const container=document.getElementById("history");
+    document.getElementById("history").innerHTML=''
+
+    for (const i of callData){
+    const divs= document.createElement("div")
+    divs.innerHTML=`<div class="flex justify-between items-center gap-1 shadow-md rounded-lg bg-[#fafafa] p-3 mt-2">
+            <div>
+            <h1 class="font-semibold">${i.sName}</h1>
+            <h1>${i.sNumber}</h1>
+            </div>
+            <p>${i.time}</p>
+          </div>`
+container.appendChild(divs)
+}
+
+}
+
 
 
 document.getElementById("card-container").addEventListener("click",function(event){
@@ -26,6 +47,15 @@ document.getElementById("card-container").addEventListener("click",function(even
 
        coin= coin - 20;
        document.getElementById("coin-amount").innerText=coin;
+
+       const data= {
+        sName: serviceName,
+        sNumber: serviceNumber,
+        time:new Date().toLocaleTimeString(),
+       }
+
+       callData.push(data);
+        callHistory(callData);
         
     }
 
@@ -33,18 +63,15 @@ document.getElementById("card-container").addEventListener("click",function(even
         alert("You dont have enough balance to make a call.")
     }
 
-    else{
-        return;
-        // alert("You dont have enough balance to make a call.")
+
+    else if(event.target.getAttribute("class").includes("fa-heart")){
+            hearts= hearts+1;
+       document.getElementById("heart-count").innerText=hearts;
+
     }
 
-    
+    else{
+        return;
+    }
 })
 
-
-
-
-document.getElementById("heart").addEventListener("click",function(event){
-    hearts= hearts+1;
-       document.getElementById("heart-count").innerText=hearts;
-})
