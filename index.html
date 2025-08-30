@@ -39,14 +39,14 @@
           <div
             class="bg-[#41ff6b1a] rounded-full flex justify-center items-center gap-3 p-2"
           >
-            <span class="text-lg font-extrabold ml-6">1000</span>
+            <span class="text-lg font-extrabold ml-6">0</span>
             <img class="w-7 mr-6" src="./assets/heart.png" alt="" />
           </div>
 
           <div
             class="bg-[#41ff6b1a] rounded-full flex justify-center items-center gap-3 p-2"
           >
-            <span class="text-lg font-extrabold ml-6">100</span>
+            <span id="coin-amount" class="text-lg font-extrabold ml-6">20</span>
             <img class="w-7 mr-6" src="./assets/coin.png" alt="" />
           </div>
 
@@ -78,9 +78,9 @@
 
     <main class="bg-[#f5fff6] px-15 py-12 flex justify-center ">
 
-      <div class="card-container  grid grid-cols-1 md:grid-cols-4 gap-4 justify-center">
+      <div id="card-container" class=" grid grid-cols-1 md:grid-cols-4 gap-4 justify-center">
 
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -94,17 +94,19 @@
           <h1 class="text-3xl font-bold mt-6">999</h1>
           <p class="bg-[#f2f2f2] rounded-full px-4  py-1 w-fit mt-1">All</p>
 
-          <di class="flex justify-between items-center gap-2 mt-6">
+          <div class="flex justify-between items-center gap-2 mt-6">
             <button class="border px-3 py-1 rounded-lg w-1/2">
                 <i class="fa-regular fa-copy"></i> Copy</button>
-            <button class="px-3 py-1 rounded-lg bg-[#00a63e] w-1/2">
+            <button id="btn-call" class="px-3 py-1 rounded-lg bg-[#00a63e] w-1/2">
                 <img class="inline-block" src="./assets/call.png" alt=""> <span class="text-white">Call</span>
             </button>
 
-          </di>
-
+          </div>
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -118,17 +120,21 @@
           <h1 class="text-3xl font-bold mt-6">999</h1>
           <p class="bg-[#f2f2f2] rounded-full px-4  py-1 w-fit mt-1">Police</p>
 
-          <di class="flex justify-between items-center gap-2 mt-6 ">
+          <div class="flex justify-between items-center gap-2 mt-6 ">
             <button class="border px-3 py-1 rounded-lg w-1/2">
                 <i class="fa-regular fa-copy"></i> Copy</button>
-            <button class="px-3 py-1 rounded-lg bg-[#00a63e] w-1/2">
-                <img class="inline-block" src="./assets/call.png" alt=""> <span class="text-white">Call</span>
+            <button class="text-white px-3 py-1 rounded-lg bg-[#00a63e] w-1/2">
+                <img class="inline-block" src="./assets/call.png" alt=""> Call
             </button>
 
-          </di>
+          </div>
 
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -142,17 +148,21 @@
           <h1 class="text-3xl font-bold mt-6">999</h1>
           <p class="bg-[#f2f2f2] rounded-full px-4  py-1 w-fit mt-1">Fire</p>
 
-          <di class="flex justify-between items-center gap-2 mt-6">
+          <div class="flex justify-between items-center gap-2 mt-6">
             <button class="border px-3 py-1 rounded-lg w-1/2">
                 <i class="fa-regular fa-copy"></i> Copy</button>
             <button class="px-3 py-1 rounded-lg bg-[#00a63e] w-1/2">
                 <img class="inline-block" src="./assets/call.png" alt=""> <span class="text-white">Call</span>
             </button>
 
-          </di>
+          </div>
 
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -176,7 +186,12 @@
           </di>
 
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -200,7 +215,12 @@
           </di>
 
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -224,7 +244,13 @@
           </di>
 
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -248,7 +274,13 @@
           </di>
 
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -272,7 +304,12 @@
           </di>
 
         </div>
-        <div class="w-full p-8 shadow-md bg-white rounded-lg">
+
+
+
+
+
+        <div class="card w-full p-8 shadow-md bg-white rounded-lg">
 
           <div class="flex items-center justify-between">
             <div class="bg-[#ffe3e2] rounded-2xl p-3">
@@ -296,6 +333,16 @@
           </di>
 
         </div>
+
+
+
+
+
+
+
+
+
+
         <div class="w-full p-8 shadow-md bg-white rounded-lg md:row-start-1 md:row-end-4 md:col-start-4">
             <div class="flex items-center justify-between">
                      
