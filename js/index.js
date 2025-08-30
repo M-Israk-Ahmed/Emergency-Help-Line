@@ -1,19 +1,22 @@
-// let coin= 20;
-const hearts=0;
+let hearts=parseInt(document.getElementById("heart-count").innerText);
+let copy=parseInt(document.getElementById("copy-count").innerText);
 let coin= parseInt(document.getElementById("coin-amount").innerText)
 
-// const cards= document.getElementsByClassName("card")
-// // console.log(cards);
-
-// for ( const eachCard of cards(
-//     document.getel
-    
-// ))
 
 
 document.getElementById("card-container").addEventListener("click",function(event){
-    if(event.target.closest("BUTTON") && coin>=20){
-        // alert("ok")
+    
+    if(event.target.closest("BUTTON") && event.target.closest("BUTTON").getAttribute("class").includes('btn-copy')){     
+
+        const copiedData=event.target.closest("BUTTON").parentNode.parentNode.children[3].innerText;
+        navigator.clipboard.writeText(copiedData)
+        alert("copied " + copiedData)
+
+        copy=copy+1;
+         document.getElementById("copy-count").innerText=copy;
+    
+    } 
+    else if(event.target.closest("BUTTON") && coin>=20){
 
         const serviceName= event.target.closest("BUTTON").parentNode.parentNode.children[1].innerText;
         const serviceNumber=event.target.closest("BUTTON").parentNode.parentNode.children[3].innerText;
@@ -26,18 +29,22 @@ document.getElementById("card-container").addEventListener("click",function(even
         
     }
 
-    
-    else if(event.target.tagName == "BUTTON"){     
-         console.log(event.target.tagName);
-    
-    } 
+    else if( event.target.closest("BUTTON") && coin<20){
+        alert("You dont have enough balance to make a call.")
+    }
+
     else{
+        return;
         // alert("You dont have enough balance to make a call.")
     }
+
     
 })
 
-// document.getElementById("btn-call").addEventListener('click',function(event){
-    
-//     alert("ok")
-// })
+
+
+
+document.getElementById("heart").addEventListener("click",function(event){
+    hearts= hearts+1;
+       document.getElementById("heart-count").innerText=hearts;
+})
